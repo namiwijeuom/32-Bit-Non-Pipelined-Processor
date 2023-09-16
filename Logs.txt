@@ -1,3 +1,6 @@
 13.09.2023 - PC, IM, RF and DM, all are okay.
 	   - PC and IM were connected and working properly.
 	   - In cycle 3 and 4, no instuction is displayed since the instruction memory is still not fully developed.
+
+16.09.2023 - Sign extender, ALU, 2:1 MUX and Left shift by 2 all are okay.
+	   
