@@ -17,11 +17,7 @@ module RegisterFile(
     output logic [31:0] read_data2
 );
 
-    reg [31:0] registers [0:31];
-
-    // Read data from registers
-    assign read_data1 = (read_register1 == 0) ? 32'h0 : registers[read_register1];
-    assign read_data2 = (read_register2 == 0) ? 32'h0 : registers[read_register2];
+    logic [31:0] registers [31:0];
 
     // Write data to registers
     always_ff @(posedge clk)
@@ -29,5 +25,10 @@ module RegisterFile(
         if (write_enable)
             registers[write_register] <= write_data;
     end
+	 
+	 // Read data from registers
+    assign read_data1 = (read_register1 != 0) ? registers[read_register1]:0 ;
+    assign read_data2 = (read_register2 != 0) ? registers[read_register2]:0 ;
+
 
 endmodule

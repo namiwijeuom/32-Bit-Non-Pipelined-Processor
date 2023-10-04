@@ -13,16 +13,16 @@ module DataMemory(
     output logic [31:0] read_data
 );
 
-    reg [31:0] memory [0:1023]; // 1K words of 32 bits each
-
+    logic [31:0]  ram [63:0]; 
+	 
     // Read data from memory
-    assign read_data = memory[address];
+    assign read_data = ram[address[31:2]];
 
     // Write data to memory
     always_ff @(posedge clk)
     begin
         if (write_enable)
-            memory[address] <= write_data;
+            ram[address[31:2]] <= write_data;
     end
 
 endmodule
