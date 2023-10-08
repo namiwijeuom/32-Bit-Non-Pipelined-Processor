@@ -6,7 +6,7 @@ module TopMIPS(
 
 logic [31:0] pc, instr, readdata;
 
-// instantiate processor and memories
+// Instantiate the processor and memories
 	MIPS mips(clk, reset, pc, instr, memwrite, dataadr,
 				writedata, readdata);
 				
