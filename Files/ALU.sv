@@ -1,3 +1,4 @@
+// A simple Arithmetic and Logical Unit
 module ALU(
     input logic [31:0] operand1,
     input logic [31:0] operand2,

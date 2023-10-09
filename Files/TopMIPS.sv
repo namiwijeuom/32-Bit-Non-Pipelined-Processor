@@ -1,3 +1,5 @@
+// MIPS Top Module
+
 module TopMIPS(
 	input logic clk, reset,
 	output logic [31:0] writedata, dataadr,

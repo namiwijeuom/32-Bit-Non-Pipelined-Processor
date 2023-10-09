@@ -1,69 +1,90 @@
 module Testbench_ALU;
 
-    logic [31:0] input_A;
-    logic [31:0] input_B;
-    logic [2:0] alu_ctrl;
-    logic zero_flag;
-    logic [31:0] output_result;
+    // Define the ALU module inputs and outputs
+    logic [31:0] operand1, operand2;
+    logic [2:0] alucontrol;
+    wire [31:0] result;
+    wire zero;
 
     // Instantiate the ALU module
-    ALU my_ALU (
-        .input_A(input_A),
-        .input_B(input_B),
-        .alu_ctrl(alu_ctrl),
-        .zero_flag(zero_flag),
-        .output_result(output_result)
+    ALU uut (
+        .operand1(operand1),
+        .operand2(operand2),
+        .alucontrol(alucontrol),
+        .result(result),
+        .zero(zero)
     );
 
-    // Test sequence
+    // Clock generation
+    logic clk = 0;
+    always begin
+        #5 clk = ~clk;
+    end
+
+    // Test cases
     initial begin
-        // Test AND operation
-        input_A = 32'b10110010101011101000010011100101;
-        input_B = 32'b10111101010001101010000111101010;
-        alu_ctrl = 3'b000; // AND
+        // Test case 1: AND operation
+        operand1 = 32'b11001100;
+        operand2 = 32'b10101010;
+        alucontrol = 3'b000;
         #10;
-        $display("AND Result: %h, Zero Flag: %b", output_result, zero_flag);
+        if (result === 32'b10001000 && zero === 0)
+            $display("Test case 1 passed");
+        else
+            $display("Test case 1 failed");
 
-        // Test ADD operation
-        input_A = 32'b10110010101011101000010011100101;
-        input_B = 32'b10111101010001101010000111101010;
-        alu_ctrl = 3'b011; // ADD
+        // Test case 2: OR operation
+        operand1 = 32'b11001100;
+        operand2 = 32'b10101010;
+        alucontrol = 3'b001;
         #10;
-        $display("ADD Result: %h, Zero Flag: %b", output_result, zero_flag);
+        if (result === 32'b11101110 && zero === 0)
+            $display("Test case 2 passed");
+        else
+            $display("Test case 2 failed");
 
-        // Add more test cases for different operations
-		  
-		  // Test OR operation
-        input_A = 32'b10110010101011101000010011100101;
-        input_B = 32'b10111101010001101010000111101010;
-        alu_ctrl = 3'b001; // OR
+        // Test case 3: ADD operation
+        operand1 = 32'b11001100;
+        operand2 = 32'b10101010;
+        alucontrol = 3'b010;
         #10;
-        $display("OR Result: %h, Zero Flag: %b", output_result, zero_flag);
-		  
-		  // Test XOR operation
-        input_A = 32'b10110010101011101000010011100101;
-        input_B = 32'b10111101010001101010000111101010;
-        alu_ctrl = 3'b010; // XOR
+        if (result === 32'b101110110 && zero === 0)
+            $display("Test case 3 passed");
+        else
+            $display("Test case 3 failed");
+
+        // Test case 4: SUB operation
+        operand1 = 32'b11001100;
+        operand2 = 32'b10101010;
+        alucontrol = 3'b110;
         #10;
-        $display("XOR Result: %h, Zero Flag: %b", output_result, zero_flag);
-		  
-		  
-		  // Test SUB operation
-        input_A = 32'b10110010101011101000010011100101;
-        input_B = 32'b10111101010001101010000111101010;
-        alu_ctrl = 3'b100; // SUB
+        if (result === 32'b00100010 && zero === 0)
+            $display("Test case 4 passed");
+        else
+            $display("Test case 4 failed");
+
+        // Test case 5: SLT operation (operand1 < operand2)
+        operand1 = 32'b00110000;
+        operand2 = 32'b11000000;
+        alucontrol = 3'b111;
         #10;
-        $display("SUB Result: %h, Zero Flag: %b", output_result, zero_flag);
-		 
-		 
-			// Test SLL operation
-        input_A = 32'b10110010101011101000010011100101;
-        input_B = 32'b10111101010001101010000111101010;
-        alu_ctrl = 3'b101; // SLL
+        if (result === 32'b1 && zero === 0)
+            $display("Test case 5 passed");
+        else
+            $display("Test case 5 failed");
+
+        // Test case 6: SLT operation (operand1 >= operand2)
+        operand1 = 32'b11000000;
+        operand2 = 32'b00110000;
+        alucontrol = 3'b111;
         #10;
-        $display("SLL Result: %h, Zero Flag: %b", output_result, zero_flag);
-		 
-        // Finish the simulation
+        if (result === 32'b0 && zero === 1)
+            $display("Test case 6 passed");
+        else
+            $display("Test case 6 failed");
+
+        // Add more test cases as needed...
+
         $finish;
     end
 

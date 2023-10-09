@@ -1,14 +1,11 @@
+// a is a 16-bit input signal which represents the original value that is needed to sign-extend to 32 bits.
+// y is a 32-bit output signal which contains the sign-extended version of the input a
+
 module SignExtender(
-    input logic [15:0] input_data, // Input data (16 bits)
-    output logic [31:0] output_data // Output data (32 bits)
-);
+	input logic [15:0] a,
+	output logic [31:0] y);
 
-    // Sign extend logic
-    always_comb begin
-        if (input_data[15] == 1'b1) // If the sign bit is 1 (negative)
-            output_data = {{16{1'b1}}, input_data};
-        else // If the sign bit is 0 (positive or zero)
-            output_data = {{16{1'b0}}, input_data};
-    end
+	assign y = {{16{a[15]}}, a};
 
-endmodule
+
+endmodule 

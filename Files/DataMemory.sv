@@ -6,10 +6,8 @@
 
 
 module DataMemory(
-    input logic clk,
-    input logic [31:0] address,
-    input logic [31:0] write_data,
-    input logic write_enable,
+    input logic clk,write_enable,
+    input logic [31:0] address,write_data,
     output logic [31:0] read_data
 );
 

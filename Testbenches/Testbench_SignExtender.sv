@@ -12,12 +12,12 @@ module Testbench_SignExtender;
     // Test sequence
     initial begin
         // Test positive number (no sign extension)
-        input_data = 16'h1234;
+        input_data = 16'b0010101010101010;
         #10;
         $display("Input: %h, Output: %h", input_data, output_data);
 
         // Test negative number (sign extension)
-        input_data = 16'hFEDC;
+        input_data = 16'b1111101010101011;
         #10;
         $display("Input: %h, Output: %h", input_data, output_data);
 

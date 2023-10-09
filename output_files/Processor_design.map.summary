@@ -1,7 +1,7 @@
-Analysis & Elaboration Status : Successful - Sun Oct 08 10:26:47 2023
+Analysis & Elaboration Status : Successful - Mon Oct 09 22:52:38 2023
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : Processor_design
-Top-level Entity Name : Testbench_InstructionMemory2
+Top-level Entity Name : MIPStestbench
 Family : Cyclone IV E
 Total logic elements : N/A until Partition Merge
     Total combinational functions : N/A until Partition Merge

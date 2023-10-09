@@ -1,3 +1,6 @@
+// High-level representation of a MIPS (Microprocessor without Interlocked Pipeline Stages) processor 
+// or a processor core
+
 module MIPS(
 	input logic clk, reset,
 	output logic [31:0] pc,

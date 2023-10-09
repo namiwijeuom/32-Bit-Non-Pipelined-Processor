@@ -1,4 +1,6 @@
-module ResetableFF #(parameter WIDTH = 8)
+// A simple resettable D flip-flop module
+
+module ResetableFF #(parameter WIDTH = 32)
 (
 	input logic clk, reset,
 	input logic [WIDTH-1:0] d,

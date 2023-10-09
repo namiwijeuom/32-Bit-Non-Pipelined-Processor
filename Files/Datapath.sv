@@ -31,13 +31,13 @@ module Datapath(
 	
 	input logic [31:0] readdata 
 );
-//Internal Signals:
-//
-//writereg: A 5-bit signal used for selecting the destination register.
-//pcnext, pcnextbr, pcplus4, pcbranch: Signals related to program counter calculations.
-//signimm, signimmsh: Signals for sign-extending immediate values.
-//srca and srcb: Source operands for the ALU.
-//result: Result of ALU or register read.
+	//Internal Signals:
+	//
+	//writereg: A 5-bit signal used for selecting the destination register.
+	//pcnext, pcnextbr, pcplus4, pcbranch: Signals related to program counter calculations.
+	//signimm, signimmsh: Signals for sign-extending immediate values.
+	//srca and srcb: Source operands for the ALU.
+	//result: Result of ALU or register read.
 
 	logic [4:0] writereg;
 	logic [31:0] pcnext, pcnextbr, pcplus4, pcbranch;
@@ -52,21 +52,22 @@ module Datapath(
 	//pcadd2: Adds pcplus4 and the left-shifted immediate value to calculate pcbranch.
 	//pcbrmux: Selects the next program counter value (pcnextbr) based on the pcsrc control signal.
 	//pcmux: Selects the final next program counter value (pcnext) based on the jump control signal.
-	//	ResetableFF #(32) pcreg(clk, reset, pcnext, pc);
-	Adder pcadd1(pc, 32'b100, pcplus4);
-	LeftShiftBy2 immsh(signimm, signimmsh);
-	Adder pcadd2(pcplus4, signimmsh, pcbranch);
-	mux2 #(32) pcbrmux(pcplus4, pcbranch, pcsrc, pcnextbr);
-	mux2 #(32) pcmux(pcnextbr, {pcplus4[31:28],instr[25:0], 2'b00}, jump, pcnext);
+	ResetableFF #(32) 	pcreg(clk, reset, pcnext, pc);
+	Adder 					pcadd1(pc, 32'b100, pcplus4);
+	LeftShiftBy2 			immsh(signimm, signimmsh);
+	Adder 					pcadd2(pcplus4, signimmsh, pcbranch);
+	mux2 #(32) 				pcbrmux(pcplus4, pcbranch, pcsrc, pcnextbr);
+	mux2 #(32) 				pcmux(pcnextbr, {pcplus4[31:28],instr[25:0], 2'b00}, jump, pcnext);
 
 	// Register file logic
 	
 	//rf: Represents the register file, which reads registers (srca, srcb), writes to a register (writereg), and provides the result (result).
 	//wrmux: Selects the register to be written based on the regdst control signal.
 	//resmux: Selects the result to be used based on the memtoreg control signal.
-	RegisterFile rf(clk, regwrite, instr[25:21], instr[20:16],writereg, result, srca, writedata);
-	mux2 #(5) wrmux(instr[20:16], instr[15:11],regdst, writereg);
-	mux2 #(32) resmux(aluout, readdata, memtoreg, result);
+	RegisterFile 			rf(clk, regwrite, instr[25:21], instr[20:16],writereg, result, srca, writedata);
+	//RegisterFile 			rf(clk, write_enable, instr[25:21], instr[20:16],writereg, result, srca, writedata);
+	mux2 #(5) 				wrmux(instr[20:16], instr[15:11],regdst, writereg);
+	mux2 #(32) 				resmux(aluout, readdata, memtoreg, result);
 	
 	//se: Sign-extends the lower 16 bits of the instruction to a 32-bit value (signimm).
 	SignExtender se(instr[15:0], signimm);
@@ -74,7 +75,7 @@ module Datapath(
 	// ALU logic
 	//	srcbmux: Selects the second ALU operand (srcb) based on the alusrc control signal.
 	//alu: Represents the Arithmetic Logic Unit (ALU) that performs operations on srca and srcb based on the alucontrol signal, producing aluout as the output.
-	mux2 #(32) srcbmux(writedata, signimm, alusrc, srcb);
-	ALU alu(srca, srcb, alucontrol, aluout, zero);
+	mux2 #(32) 				srcbmux(writedata, signimm, alusrc, srcb);
+	ALU 						alu(srca, srcb, alucontrol, aluout, zero);
 
 endmodule 

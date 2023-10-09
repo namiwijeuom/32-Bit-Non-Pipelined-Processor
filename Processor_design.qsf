@@ -39,31 +39,31 @@
 
 set_global_assignment -name FAMILY "Cyclone IV E"
 set_global_assignment -name DEVICE auto
-set_global_assignment -name TOP_LEVEL_ENTITY Testbench_LeftShiftBy2
+set_global_assignment -name TOP_LEVEL_ENTITY MIPStestbench
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 20.1.1
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "21:48:50  SEPTEMBER 13, 2023"
 set_global_assignment -name LAST_QUARTUS_VERSION "20.1.1 Lite Edition"
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
-set_global_assignment -name SYSTEMVERILOG_FILE ProgramCounter.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ProgramCounter_Testbench.sv
 set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (SystemVerilog)"
 set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "SYSTEMVERILOG HDL" -section_id eda_simulation
-set_global_assignment -name SYSTEMVERILOG_FILE InstructionMemory.sv
-set_global_assignment -name SYSTEMVERILOG_FILE Testbench_InstructionMemory.sv
 set_global_assignment -name SYSTEMVERILOG_FILE RegisterFile.sv
-set_global_assignment -name SYSTEMVERILOG_FILE Testbench_RegisterFile.sv
 set_global_assignment -name SYSTEMVERILOG_FILE DataMemory.sv
-set_global_assignment -name SYSTEMVERILOG_FILE Testbench_DataMemory.sv
-set_global_assignment -name SYSTEMVERILOG_FILE PC_InstructionMemory.sv
-set_global_assignment -name SYSTEMVERILOG_FILE Testbench_PC_InstructionMemory.sv
 set_global_assignment -name SYSTEMVERILOG_FILE SignExtender.sv
-set_global_assignment -name SYSTEMVERILOG_FILE Testbench_SignExtender.sv
 set_global_assignment -name SYSTEMVERILOG_FILE ALU.sv
-set_global_assignment -name SYSTEMVERILOG_FILE Testbench_ALU.sv
 set_global_assignment -name SYSTEMVERILOG_FILE Mux2to1_32bit.sv
-set_global_assignment -name SYSTEMVERILOG_FILE Testbench_Mux2to1_32bit.sv
 set_global_assignment -name SYSTEMVERILOG_FILE LeftShiftBy2.sv
-set_global_assignment -name SYSTEMVERILOG_FILE Testbench_LeftShiftBy2.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ALUDecoder.sv
+set_global_assignment -name SYSTEMVERILOG_FILE Adder.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ResetableFF.sv
+set_global_assignment -name SYSTEMVERILOG_FILE mux2.sv
+set_global_assignment -name SYSTEMVERILOG_FILE MIPS.sv
+set_global_assignment -name SYSTEMVERILOG_FILE Controller.sv
+set_global_assignment -name SYSTEMVERILOG_FILE MainDecoder.sv
+set_global_assignment -name SYSTEMVERILOG_FILE Datapath.sv
+set_global_assignment -name SYSTEMVERILOG_FILE InsructionMemory2.sv
+set_global_assignment -name SYSTEMVERILOG_FILE TopMIPS.sv
+set_global_assignment -name SYSTEMVERILOG_FILE MIPStestbench.sv
+set_global_assignment -name SOURCE_FILE memfile.dat
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top

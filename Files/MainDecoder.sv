@@ -1,3 +1,6 @@
+// The module which is responsible for decoding the opcode (op) of MIPS instructions 
+// and generating various control signals that determine the operation of the processor
+
 module MainDecoder(
 	input logic [5:0] op,
 	output logic memtoreg, memwrite,
