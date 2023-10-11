@@ -1,0 +1,16 @@
+Fitter Status : Successful - Wed Oct 11 11:24:21 2023
+Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+Revision Name : Processor_design
+Top-level Entity Name : TopMIPS
+Family : Cyclone IV E
+Device : EP4CE22F17C6
+Timing Models : Final
+Total logic elements : 3,171 / 22,320 ( 14 % )
+    Total combinational functions : 2,135 / 22,320 ( 10 % )
+    Dedicated logic registers : 2,310 / 22,320 ( 10 % )
+Total registers : 2310
+Total pins : 67 / 154 ( 44 % )
+Total virtual pins : 0
+Total memory bits : 0 / 608,256 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 132 ( 0 % )
+Total PLLs : 0 / 4 ( 0 % )

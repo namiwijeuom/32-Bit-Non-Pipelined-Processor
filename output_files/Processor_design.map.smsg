@@ -1,1 +1,1 @@
-Info (10281): Verilog HDL Declaration information at PC_InstructionMemory.sv(7): object "pc" differs only in case from object "PC" in the same scope File: C:/Verilog_and_SystemVerilog/PC_InstructionMemory.sv Line: 7
+Warning (10273): Verilog HDL warning at Datapath.sv(80): extended using "x" or "z" File: C:/Verilog_and_SystemVerilog/Datapath.sv Line: 80

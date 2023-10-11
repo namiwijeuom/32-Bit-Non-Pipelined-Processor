@@ -13,69 +13,81 @@
 //aluout: The result of the ALU operation.
 //writedata: Data to be written to memory.
 
-module Datapath(
-	
-	input logic clk, reset,
-	
-	input logic memtoreg, pcsrc,
-	input logic alusrc, regdst,
-	input logic regwrite, jump,
-	input logic [2:0] alucontrol,
-	
-	output logic zero,
-	output logic [31:0] pc,
-	
-	input logic [31:0] instr,
-	
-	output logic [31:0] aluout, writedata,
-	
-	input logic [31:0] readdata 
-);
-	//Internal Signals:
-	//
-	//writereg: A 5-bit signal used for selecting the destination register.
-	//pcnext, pcnextbr, pcplus4, pcbranch: Signals related to program counter calculations.
-	//signimm, signimmsh: Signals for sign-extending immediate values.
-	//srca and srcb: Source operands for the ALU.
-	//result: Result of ALU or register read.
+module Datapath(input logic clk, reset,
+                input logic memtoreg, pcsrc,
+                input logic [1:0] alusrc,
+                input logic ne,
+                input logic regdst, lbu, link,
+                input logic regwrite, jump,jr, half,b,
+                input logic [3:0] alucontrol,
+                output logic zero,
+                output logic [31:0] pc,
+                input logic [31:0] instr,
+                output logic [31:0] aluout, writedata,
+                input logic [31:0] readdata);
 
-	logic [4:0] writereg;
-	logic [31:0] pcnext, pcnextbr, pcplus4, pcbranch;
-	logic [31:0] signimm, signimmsh;
-	logic [31:0] srca, srcb;
-	logic [31:0] result;
 
-	// Next PC logic
-	//pcreg: A 32-bit register to store the program counter.
-	//pcadd1: Adds 32 to the program counter, calculating pcplus4.
-	//immsh: Left-shifts the sign-extended immediate value.
-	//pcadd2: Adds pcplus4 and the left-shifted immediate value to calculate pcbranch.
-	//pcbrmux: Selects the next program counter value (pcnextbr) based on the pcsrc control signal.
-	//pcmux: Selects the final next program counter value (pcnext) based on the jump control signal.
-	ResetableFF #(32) 	pcreg(clk, reset, pcnext, pc);
-	Adder 					pcadd1(pc, 32'b100, pcplus4);
-	LeftShiftBy2 			immsh(signimm, signimmsh);
-	Adder 					pcadd2(pcplus4, signimmsh, pcbranch);
-	mux2 #(32) 				pcbrmux(pcplus4, pcbranch, pcsrc, pcnextbr);
-	mux2 #(32) 				pcmux(pcnextbr, {pcplus4[31:28],instr[25:0], 2'b00}, jump, pcnext);
+    logic [4:0] writereg;
+    logic [31:0] pcnext, pcnextbr, pcplus4, pcbranch,pcnextj;
+    logic [31:0] signimm, signimmsh;
+    logic [31:0] srca, srcb;
+    logic [31:0] result; // datamemory after the one byte design
+    logic [31:0] result_T; 
+    logic [31:0] bfresult ;
+    logic [4:0] outwrite;
+    logic [31:0] half_result_extended;
+    logic [31:0] hw_dataMemeoryOutput; // datamemory after the half word design
+    logic [31:0] one_byte_result_sign_extended;
 
-	// Register file logic
-	
-	//rf: Represents the register file, which reads registers (srca, srcb), writes to a register (writereg), and provides the result (result).
-	//wrmux: Selects the register to be written based on the regdst control signal.
-	//resmux: Selects the result to be used based on the memtoreg control signal.
-	RegisterFile 			rf(clk, regwrite, instr[25:21], instr[20:16],writereg, result, srca, writedata);
-	//RegisterFile 			rf(clk, write_enable, instr[25:21], instr[20:16],writereg, result, srca, writedata);
-	mux2 #(5) 				wrmux(instr[20:16], instr[15:11],regdst, writereg);
-	mux2 #(32) 				resmux(aluout, readdata, memtoreg, result);
-	
-	//se: Sign-extends the lower 16 bits of the instruction to a 32-bit value (signimm).
-	SignExtender se(instr[15:0], signimm);
 
-	// ALU logic
-	//	srcbmux: Selects the second ALU operand (srcb) based on the alusrc control signal.
-	//alu: Represents the Arithmetic Logic Unit (ALU) that performs operations on srca and srcb based on the alucontrol signal, producing aluout as the output.
-	mux2 #(32) 				srcbmux(writedata, signimm, alusrc, srcb);
-	ALU 						alu(srca, srcb, alucontrol, aluout, zero);
+    // next PC logic
+    ResetableFF #(32) 		pcreg(clk, reset, pcnext, pc);
 
+    Adder 						pcadd1(pc, 32'b100, pcplus4); //normal +4
+
+    LeftShiftBy2  			immsh(signimm, signimmsh); //jumb
+
+    Adder 						pcadd2(pcplus4, signimmsh, pcbranch); //branch or jumb
+
+    //half
+    SignExtender 				se2(result_T[15:0], half_result_extended); //extend sign
+    
+	 //mux after the halfword
+    mux2 #(32) 				halfmux(result_T,half_result_extended,half,hw_dataMemeoryOutput);
+    
+	 // one byte
+    SignExtender #(24,8) 	se3(result_T[7:0], one_byte_result_sign_extended);
+    
+	 //mux after the one byte word
+    mux2 #(32) 				ob_mux(hw_dataMemeoryOutput,
+                    one_byte_result_sign_extended,
+                    b,
+                    bfresult);
+    mux2 #(32) 				jal_resmux(bfresult, pcplus4, link, result);
+
+    mux2 #(32) 				pcbrmux(pcplus4, pcbranch, pcsrc, pcnextbr);
+    mux2 #(32) 				pcmux(pcnextbr, {pcplus4[31:28],
+									instr[25:0], 2'b00}, jump, pcnextj);
+    mux2 #(32) 				pcjrmux(pcnextj, srca, jr, pcnext);
+
+    RegisterFile 				rf(clk, regwrite, instr[25:21], instr[20:16],writereg, result, srca, writedata);
+
+    mux2 #(5) 					wrmux(instr[20:16], instr[15:11], regdst, outwrite);
+    
+	 mux2 #(5) 					linkmux(outwrite, 5'b11111, link, writereg);
+    // mux2 #(32) resmux(aluout, readdata, memtoreg, result_T);
+    
+	 mux4 #(32) 				resmux(aluout, readdata, {24'b0,readdata[7:0]},{32'bx}, {lbu,memtoreg},result_T);////hey....:)from mux 2 to 4 and zero ext is modified with parameters ...good luck :)
+
+    SignExtender 				se(instr[15:0], signimm); //extend sign
+
+    logic [31:0] extimm;
+    logic [31:0] zeroimm;
+    ExtNext 		ex(instr[15:0], zeroimm);
+	 
+    // ALU logic
+    mux2 #(32) 	srcbmux(writedata, extimm, alusrc[0], srcb);
+    mux2 #(32) 	extimux(signimm ,  zeroimm, alusrc[1], extimm);
+    ALU			 	alu(srca, srcb, instr[10:6], alucontrol, aluout, zero); //inst[10:6] shamt
+	 
 endmodule 

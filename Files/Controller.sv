@@ -18,20 +18,27 @@ module Controller(
 //regdst: Indicates which destination register should be written to.
 //regwrite: Indicates whether a write operation should be performed on the register file.
 //jump: Indicates whether the instruction is a jump instruction.
-//alucontrol (3 bits): Control the operation of the Arithmetic Logic Unit (ALU).
+//alucontrol (4 bits): Control the operation of the Arithmetic Logic Unit (ALU).
 	output logic memtoreg, memwrite,
-	output logic pcsrc, alusrc,
+	output logic pcsrc, 
+	output logic [1:0]alusrc,
 	output logic regdst, regwrite,
-	output logic jump,
-	output logic [2:0] alucontrol);
+	output logic jump,jr,
+	output logic ne,
+	output logic half,
+	output logic b,
+	output logic [3:0] alucontrol,
+	output logic lbu, link);
 
-	logic [1:0] aluop;
+	logic [3:0] aluop;
 
 	logic branch;
 
-	MainDecoder 	md(op, memtoreg, memwrite, branch,alusrc, regdst, regwrite, jump, aluop);
+	MainDecoder 	md(op,funct, memtoreg, memwrite, branch,alusrc, regdst, regwrite, jump,jr,ne, half, b, aluop, lbu, link);
 	ALUDecoder 		ad(funct, aluop, alucontrol);
-
+	
+	logic  bne_rc;
+	assign bne_rc = ne ^ zero ;
 	assign pcsrc = branch & zero;
 	
 endmodule 
