@@ -12,170 +12,190 @@
 # 
 # vlog -sv -work work +incdir+C:/Verilog_and_SystemVerilog {C:/Verilog_and_SystemVerilog/RegisterFile.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 22:35:52 on Oct 09,2023
+# Start time: 14:42:12 on Oct 12,2023
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Verilog_and_SystemVerilog" C:/Verilog_and_SystemVerilog/RegisterFile.sv 
 # -- Compiling module RegisterFile
 # 
 # Top level modules:
 # 	RegisterFile
-# End time: 22:35:52 on Oct 09,2023, Elapsed time: 0:00:00
+# End time: 14:42:12 on Oct 12,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Verilog_and_SystemVerilog {C:/Verilog_and_SystemVerilog/DataMemory.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 22:35:52 on Oct 09,2023
+# Start time: 14:42:12 on Oct 12,2023
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Verilog_and_SystemVerilog" C:/Verilog_and_SystemVerilog/DataMemory.sv 
 # -- Compiling module DataMemory
 # 
 # Top level modules:
 # 	DataMemory
-# End time: 22:35:53 on Oct 09,2023, Elapsed time: 0:00:01
+# End time: 14:42:12 on Oct 12,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Verilog_and_SystemVerilog {C:/Verilog_and_SystemVerilog/SignExtender.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 22:35:53 on Oct 09,2023
+# Start time: 14:42:12 on Oct 12,2023
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Verilog_and_SystemVerilog" C:/Verilog_and_SystemVerilog/SignExtender.sv 
 # -- Compiling module SignExtender
 # 
 # Top level modules:
 # 	SignExtender
-# End time: 22:35:53 on Oct 09,2023, Elapsed time: 0:00:00
+# End time: 14:42:12 on Oct 12,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Verilog_and_SystemVerilog {C:/Verilog_and_SystemVerilog/ALU.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 22:35:53 on Oct 09,2023
+# Start time: 14:42:12 on Oct 12,2023
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Verilog_and_SystemVerilog" C:/Verilog_and_SystemVerilog/ALU.sv 
 # -- Compiling module ALU
 # 
 # Top level modules:
 # 	ALU
-# End time: 22:35:53 on Oct 09,2023, Elapsed time: 0:00:00
+# End time: 14:42:12 on Oct 12,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Verilog_and_SystemVerilog {C:/Verilog_and_SystemVerilog/LeftShiftBy2.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 22:35:53 on Oct 09,2023
+# Start time: 14:42:12 on Oct 12,2023
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Verilog_and_SystemVerilog" C:/Verilog_and_SystemVerilog/LeftShiftBy2.sv 
 # -- Compiling module LeftShiftBy2
 # 
 # Top level modules:
 # 	LeftShiftBy2
-# End time: 22:35:53 on Oct 09,2023, Elapsed time: 0:00:00
+# End time: 14:42:12 on Oct 12,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Verilog_and_SystemVerilog {C:/Verilog_and_SystemVerilog/ALUDecoder.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 22:35:53 on Oct 09,2023
+# Start time: 14:42:12 on Oct 12,2023
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Verilog_and_SystemVerilog" C:/Verilog_and_SystemVerilog/ALUDecoder.sv 
 # -- Compiling module ALUDecoder
 # 
 # Top level modules:
 # 	ALUDecoder
-# End time: 22:35:53 on Oct 09,2023, Elapsed time: 0:00:00
+# End time: 14:42:13 on Oct 12,2023, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Verilog_and_SystemVerilog {C:/Verilog_and_SystemVerilog/Adder.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 22:35:53 on Oct 09,2023
+# Start time: 14:42:13 on Oct 12,2023
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Verilog_and_SystemVerilog" C:/Verilog_and_SystemVerilog/Adder.sv 
 # -- Compiling module Adder
 # 
 # Top level modules:
 # 	Adder
-# End time: 22:35:53 on Oct 09,2023, Elapsed time: 0:00:00
+# End time: 14:42:13 on Oct 12,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Verilog_and_SystemVerilog {C:/Verilog_and_SystemVerilog/ResetableFF.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 22:35:53 on Oct 09,2023
+# Start time: 14:42:13 on Oct 12,2023
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Verilog_and_SystemVerilog" C:/Verilog_and_SystemVerilog/ResetableFF.sv 
 # -- Compiling module ResetableFF
 # 
 # Top level modules:
 # 	ResetableFF
-# End time: 22:35:53 on Oct 09,2023, Elapsed time: 0:00:00
+# End time: 14:42:13 on Oct 12,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Verilog_and_SystemVerilog {C:/Verilog_and_SystemVerilog/mux2.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 22:35:53 on Oct 09,2023
+# Start time: 14:42:13 on Oct 12,2023
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Verilog_and_SystemVerilog" C:/Verilog_and_SystemVerilog/mux2.sv 
 # -- Compiling module mux2
 # 
 # Top level modules:
 # 	mux2
-# End time: 22:35:53 on Oct 09,2023, Elapsed time: 0:00:00
+# End time: 14:42:13 on Oct 12,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Verilog_and_SystemVerilog {C:/Verilog_and_SystemVerilog/MIPS.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 22:35:53 on Oct 09,2023
+# Start time: 14:42:13 on Oct 12,2023
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Verilog_and_SystemVerilog" C:/Verilog_and_SystemVerilog/MIPS.sv 
 # -- Compiling module MIPS
 # 
 # Top level modules:
 # 	MIPS
-# End time: 22:35:53 on Oct 09,2023, Elapsed time: 0:00:00
+# End time: 14:42:13 on Oct 12,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Verilog_and_SystemVerilog {C:/Verilog_and_SystemVerilog/Controller.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 22:35:53 on Oct 09,2023
+# Start time: 14:42:13 on Oct 12,2023
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Verilog_and_SystemVerilog" C:/Verilog_and_SystemVerilog/Controller.sv 
 # -- Compiling module Controller
 # 
 # Top level modules:
 # 	Controller
-# End time: 22:35:53 on Oct 09,2023, Elapsed time: 0:00:00
+# End time: 14:42:13 on Oct 12,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Verilog_and_SystemVerilog {C:/Verilog_and_SystemVerilog/MainDecoder.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 22:35:53 on Oct 09,2023
+# Start time: 14:42:13 on Oct 12,2023
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Verilog_and_SystemVerilog" C:/Verilog_and_SystemVerilog/MainDecoder.sv 
 # -- Compiling module MainDecoder
 # 
 # Top level modules:
 # 	MainDecoder
-# End time: 22:35:54 on Oct 09,2023, Elapsed time: 0:00:01
+# End time: 14:42:13 on Oct 12,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Verilog_and_SystemVerilog {C:/Verilog_and_SystemVerilog/Datapath.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 22:35:54 on Oct 09,2023
+# Start time: 14:42:13 on Oct 12,2023
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Verilog_and_SystemVerilog" C:/Verilog_and_SystemVerilog/Datapath.sv 
 # -- Compiling module Datapath
 # 
 # Top level modules:
 # 	Datapath
-# End time: 22:35:54 on Oct 09,2023, Elapsed time: 0:00:00
+# End time: 14:42:13 on Oct 12,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Verilog_and_SystemVerilog {C:/Verilog_and_SystemVerilog/TopMIPS.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 22:35:54 on Oct 09,2023
+# Start time: 14:42:13 on Oct 12,2023
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Verilog_and_SystemVerilog" C:/Verilog_and_SystemVerilog/TopMIPS.sv 
 # -- Compiling module TopMIPS
 # 
 # Top level modules:
 # 	TopMIPS
-# End time: 22:35:54 on Oct 09,2023, Elapsed time: 0:00:00
+# End time: 14:42:13 on Oct 12,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Verilog_and_SystemVerilog {C:/Verilog_and_SystemVerilog/MIPStestbench.sv}
+# vlog -sv -work work +incdir+C:/Verilog_and_SystemVerilog {C:/Verilog_and_SystemVerilog/ExtNext.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 22:35:54 on Oct 09,2023
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Verilog_and_SystemVerilog" C:/Verilog_and_SystemVerilog/MIPStestbench.sv 
-# -- Compiling module MIPStestbench
+# Start time: 14:42:13 on Oct 12,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Verilog_and_SystemVerilog" C:/Verilog_and_SystemVerilog/ExtNext.sv 
+# -- Compiling module ExtNext
 # 
 # Top level modules:
-# 	MIPStestbench
-# End time: 22:35:54 on Oct 09,2023, Elapsed time: 0:00:00
+# 	ExtNext
+# End time: 14:42:13 on Oct 12,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Verilog_and_SystemVerilog {C:/Verilog_and_SystemVerilog/mux4.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:42:13 on Oct 12,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Verilog_and_SystemVerilog" C:/Verilog_and_SystemVerilog/mux4.sv 
+# -- Compiling module mux4
+# 
+# Top level modules:
+# 	mux4
+# End time: 14:42:13 on Oct 12,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Verilog_and_SystemVerilog {C:/Verilog_and_SystemVerilog/TestbenchLhlb.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:42:14 on Oct 12,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Verilog_and_SystemVerilog" C:/Verilog_and_SystemVerilog/TestbenchLhlb.sv 
+# -- Compiling module TestbenchLhlb
+# 
+# Top level modules:
+# 	TestbenchLhlb
+# End time: 14:42:14 on Oct 12,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Verilog_and_SystemVerilog {C:/Verilog_and_SystemVerilog/InsructionMemory2.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 22:35:54 on Oct 09,2023
+# Start time: 14:42:14 on Oct 12,2023
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Verilog_and_SystemVerilog" C:/Verilog_and_SystemVerilog/InsructionMemory2.sv 
 # -- Compiling module InsructionMemory2
 # 
 # Top level modules:
 # 	InsructionMemory2
-# End time: 22:35:54 on Oct 09,2023, Elapsed time: 0:00:00
+# End time: 14:42:14 on Oct 12,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-vsim work.MIPStestbench
-# vsim work.MIPStestbench 
-# Start time: 22:35:59 on Oct 09,2023
+vsim work.TestbenchLhlb
+# vsim work.TestbenchLhlb 
+# Start time: 14:42:24 on Oct 12,2023
 # Loading sv_std.std
-# Loading work.MIPStestbench
+# Loading work.TestbenchLhlb
 # Loading work.TopMIPS
 # Loading work.MIPS
 # Loading work.Controller
@@ -185,20 +205,19 @@ vsim work.MIPStestbench
 # Loading work.ResetableFF
 # Loading work.Adder
 # Loading work.LeftShiftBy2
+# Loading work.SignExtender
 # Loading work.mux2
 # Loading work.RegisterFile
-# Loading work.SignExtender
+# Loading work.mux4
+# Loading work.ExtNext
 # Loading work.ALU
 # Loading work.InsructionMemory2
 # Loading work.DataMemory
-add wave -position insertpoint sim:/MIPStestbench/*
-run
+add wave -position insertpoint sim:/TestbenchLhlb/*
 run
 # Simulation succeeded
-# ** Note: $stop    : C:/Verilog_and_SystemVerilog/MIPStestbench.sv(32)
-#    Time: 175 ps  Iteration: 1  Instance: /MIPStestbench
-# Break in Module MIPStestbench at C:/Verilog_and_SystemVerilog/MIPStestbench.sv line 32
-run
-run
-# End time: 22:37:41 on Oct 09,2023, Elapsed time: 0:01:42
+# ** Note: $stop    : C:/Verilog_and_SystemVerilog/TestbenchLhlb.sv(29)
+#    Time: 85 ps  Iteration: 1  Instance: /TestbenchLhlb
+# Break in Module TestbenchLhlb at C:/Verilog_and_SystemVerilog/TestbenchLhlb.sv line 29
+# End time: 14:51:54 on Oct 12,2023, Elapsed time: 0:09:30
 # Errors: 0, Warnings: 0

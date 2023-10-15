@@ -1,0 +1,59 @@
+Source Files Read report for Processor_design
+Sun Oct 15 16:40:42 2023
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Source Files Read
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                          ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                      ; Library ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------+---------+
+; RegisterFile.sv                  ; yes             ; User SystemVerilog HDL File  ; C:/Verilog_and_SystemVerilog/RegisterFile.sv      ;         ;
+; DataMemory.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/Verilog_and_SystemVerilog/DataMemory.sv        ;         ;
+; SignExtender.sv                  ; yes             ; User SystemVerilog HDL File  ; C:/Verilog_and_SystemVerilog/SignExtender.sv      ;         ;
+; ALU.sv                           ; yes             ; User SystemVerilog HDL File  ; C:/Verilog_and_SystemVerilog/ALU.sv               ;         ;
+; LeftShiftBy2.sv                  ; yes             ; User SystemVerilog HDL File  ; C:/Verilog_and_SystemVerilog/LeftShiftBy2.sv      ;         ;
+; ALUDecoder.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/Verilog_and_SystemVerilog/ALUDecoder.sv        ;         ;
+; Adder.sv                         ; yes             ; User SystemVerilog HDL File  ; C:/Verilog_and_SystemVerilog/Adder.sv             ;         ;
+; ResetableFF.sv                   ; yes             ; User SystemVerilog HDL File  ; C:/Verilog_and_SystemVerilog/ResetableFF.sv       ;         ;
+; mux2.sv                          ; yes             ; User SystemVerilog HDL File  ; C:/Verilog_and_SystemVerilog/mux2.sv              ;         ;
+; MIPS.sv                          ; yes             ; User SystemVerilog HDL File  ; C:/Verilog_and_SystemVerilog/MIPS.sv              ;         ;
+; Controller.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/Verilog_and_SystemVerilog/Controller.sv        ;         ;
+; MainDecoder.sv                   ; yes             ; User SystemVerilog HDL File  ; C:/Verilog_and_SystemVerilog/MainDecoder.sv       ;         ;
+; Datapath.sv                      ; yes             ; User SystemVerilog HDL File  ; C:/Verilog_and_SystemVerilog/Datapath.sv          ;         ;
+; InsructionMemory2.sv             ; yes             ; User SystemVerilog HDL File  ; C:/Verilog_and_SystemVerilog/InsructionMemory2.sv ;         ;
+; TopMIPS.sv                       ; yes             ; User SystemVerilog HDL File  ; C:/Verilog_and_SystemVerilog/TopMIPS.sv           ;         ;
+; ExtNext.sv                       ; yes             ; User SystemVerilog HDL File  ; C:/Verilog_and_SystemVerilog/ExtNext.sv           ;         ;
+; mux4.sv                          ; yes             ; User SystemVerilog HDL File  ; C:/Verilog_and_SystemVerilog/mux4.sv              ;         ;
+; memfile_lh_lb.dat                ; yes             ; User Unspecified File        ; C:/Verilog_and_SystemVerilog/memfile_lh_lb.dat    ;         ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------+---------+
+
+

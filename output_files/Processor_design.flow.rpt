@@ -1,5 +1,5 @@
 Flow report for Processor_design
-Thu Oct 12 00:42:30 2023
+Sun Oct 15 16:31:47 2023
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -41,22 +41,22 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Thu Oct 12 00:42:30 2023       ;
+; Flow Status                        ; Successful - Sun Oct 15 16:31:47 2023       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; Processor_design                            ;
-; Top-level Entity Name              ; Andiestbench                                ;
+; Top-level Entity Name              ; TopMIPS                                     ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE22F17C6                                ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; N/A until Partition Merge                   ;
-;     Total combinational functions  ; N/A until Partition Merge                   ;
-;     Dedicated logic registers      ; N/A until Partition Merge                   ;
-; Total registers                    ; N/A until Partition Merge                   ;
-; Total pins                         ; N/A until Partition Merge                   ;
-; Total virtual pins                 ; N/A until Partition Merge                   ;
-; Total memory bits                  ; N/A until Partition Merge                   ;
-; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                   ;
-; Total PLLs                         ; N/A until Partition Merge                   ;
+; Total logic elements               ; 3,651 / 22,320 ( 16 % )                     ;
+;     Total combinational functions  ; 2,590 / 22,320 ( 12 % )                     ;
+;     Dedicated logic registers      ; 2,206 / 22,320 ( 10 % )                     ;
+; Total registers                    ; 2206                                        ;
+; Total pins                         ; 67 / 154 ( 44 % )                           ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0 / 608,256 ( 0 % )                         ;
+; Embedded Multiplier 9-bit elements ; 0 / 132 ( 0 % )                             ;
+; Total PLLs                         ; 0 / 4 ( 0 % )                               ;
 +------------------------------------+---------------------------------------------+
 
 
@@ -65,53 +65,65 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 10/12/2023 00:42:24 ;
+; Start date & time ; 10/15/2023 16:30:48 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Processor_design    ;
 +-------------------+---------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                                ;
-+-------------------------------------+----------------------------------------+------------------+--------------+----------------+
-; Assignment Name                     ; Value                                  ; Default Value    ; Entity Name  ; Section Id     ;
-+-------------------------------------+----------------------------------------+------------------+--------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 264562648377093.169705154406188        ; --               ; --           ; --             ;
-; EDA_OUTPUT_DATA_FORMAT              ; Systemverilog Hdl                      ; --               ; --           ; eda_simulation ;
-; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (SystemVerilog)        ; <None>           ; --           ; --             ;
-; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --               ; --           ; --             ;
-; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --               ; --           ; --             ;
-; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --               ; Andiestbench ; Top            ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --               ; Andiestbench ; Top            ;
-; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --               ; Andiestbench ; Top            ;
-; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --               ; --           ; --             ;
-; TOP_LEVEL_ENTITY                    ; Andiestbench                           ; Processor_design ; --           ; --             ;
-+-------------------------------------+----------------------------------------+------------------+--------------+----------------+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                               ;
++-------------------------------------+----------------------------------------+------------------+-------------+----------------+
+; Assignment Name                     ; Value                                  ; Default Value    ; Entity Name ; Section Id     ;
++-------------------------------------+----------------------------------------+------------------+-------------+----------------+
+; COMPILER_SIGNATURE_ID               ; 264562648377093.169736764804808        ; --               ; --          ; --             ;
+; EDA_OUTPUT_DATA_FORMAT              ; Systemverilog Hdl                      ; --               ; --          ; eda_simulation ;
+; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (SystemVerilog)        ; <None>           ; --          ; --             ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --               ; --          ; --             ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --               ; --          ; --             ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --               ; TopMIPS     ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --               ; TopMIPS     ; Top            ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --               ; TopMIPS     ; Top            ;
+; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --               ; --          ; --             ;
+; TOP_LEVEL_ENTITY                    ; TopMIPS                                ; Processor_design ; --          ; --             ;
++-------------------------------------+----------------------------------------+------------------+-------------+----------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------+
-; Flow Elapsed Time                                                                                                          ;
-+------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Module Name            ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
-+------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Elaboration ; 00:00:06     ; 1.0                     ; 4712 MB             ; 00:00:15                           ;
-; Total                  ; 00:00:06     ; --                      ; --                  ; 00:00:15                           ;
-+------------------------+--------------+-------------------------+---------------------+------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                        ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis ; 00:00:17     ; 1.0                     ; 4785 MB             ; 00:00:25                           ;
+; Fitter               ; 00:00:31     ; 1.0                     ; 5586 MB             ; 00:00:39                           ;
+; Assembler            ; 00:00:01     ; 1.0                     ; 4690 MB             ; 00:00:01                           ;
+; Timing Analyzer      ; 00:00:03     ; 1.7                     ; 4836 MB             ; 00:00:03                           ;
+; EDA Netlist Writer   ; 00:00:03     ; 1.0                     ; 4680 MB             ; 00:00:03                           ;
+; Total                ; 00:00:55     ; --                      ; --                  ; 00:01:11                           ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
-+----------------------------------------------------------------------------------------+
-; Flow OS Summary                                                                        ;
-+------------------------+--------------------+------------+------------+----------------+
-; Module Name            ; Machine Hostname   ; OS Name    ; OS Version ; Processor type ;
-+------------------------+--------------------+------------+------------+----------------+
-; Analysis & Elaboration ; NamiWije2000isHere ; Windows 10 ; 10.0       ; x86_64         ;
-+------------------------+--------------------+------------+------------+----------------+
++--------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                      ;
++----------------------+--------------------+------------+------------+----------------+
+; Module Name          ; Machine Hostname   ; OS Name    ; OS Version ; Processor type ;
++----------------------+--------------------+------------+------------+----------------+
+; Analysis & Synthesis ; NamiWije2000isHere ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; NamiWije2000isHere ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; NamiWije2000isHere ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; NamiWije2000isHere ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; NamiWije2000isHere ; Windows 10 ; 10.0       ; x86_64         ;
++----------------------+--------------------+------------+------------+----------------+
 
 
 ------------
 ; Flow Log ;
 ------------
-quartus_map --read_settings_files=on --write_settings_files=off Processor_design -c Processor_design --analysis_and_elaboration
+quartus_map --read_settings_files=on --write_settings_files=off Processor_design -c Processor_design
+quartus_fit --read_settings_files=off --write_settings_files=off Processor_design -c Processor_design
+quartus_asm --read_settings_files=off --write_settings_files=off Processor_design -c Processor_design
+quartus_sta Processor_design -c Processor_design
+quartus_eda --read_settings_files=off --write_settings_files=off Processor_design -c Processor_design
 
 
 

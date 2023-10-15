@@ -7,7 +7,7 @@ module InsructionMemory2(
 
 	initial
 
-	$readmemh("C:/Verilog_and_SystemVerilog/memfile_andi.dat", ram);
+	$readmemh("C:/Verilog_and_SystemVerilog/memfile_lh_lb.dat", ram);
 
 	assign readdata = ram[a]; // word aligned
 
