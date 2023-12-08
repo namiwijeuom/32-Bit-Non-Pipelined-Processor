@@ -19,8 +19,8 @@ vlog -sv -work work +incdir+C:/Verilog_and_SystemVerilog {C:/Verilog_and_SystemV
 vlog -sv -work work +incdir+C:/Verilog_and_SystemVerilog {C:/Verilog_and_SystemVerilog/MainDecoder.sv}
 vlog -sv -work work +incdir+C:/Verilog_and_SystemVerilog {C:/Verilog_and_SystemVerilog/Datapath.sv}
 vlog -sv -work work +incdir+C:/Verilog_and_SystemVerilog {C:/Verilog_and_SystemVerilog/TopMIPS.sv}
+vlog -sv -work work +incdir+C:/Verilog_and_SystemVerilog {C:/Verilog_and_SystemVerilog/MIPStestbench.sv}
 vlog -sv -work work +incdir+C:/Verilog_and_SystemVerilog {C:/Verilog_and_SystemVerilog/ExtNext.sv}
 vlog -sv -work work +incdir+C:/Verilog_and_SystemVerilog {C:/Verilog_and_SystemVerilog/mux4.sv}
-vlog -sv -work work +incdir+C:/Verilog_and_SystemVerilog {C:/Verilog_and_SystemVerilog/TestbenchJal.sv}
 vlog -sv -work work +incdir+C:/Verilog_and_SystemVerilog {C:/Verilog_and_SystemVerilog/InsructionMemory2.sv}
 

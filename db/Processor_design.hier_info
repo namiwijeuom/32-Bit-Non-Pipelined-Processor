@@ -1,74 +1,170 @@
-|TopMIPS
+|Top_MIPS_IO
+clk => clk.IN1
+reset => reset.IN1
+clkEnable => clkEnable.IN1
+led_segment_0[0] << SevenSegmentFinal:ssI1.out_ssd
+led_segment_0[1] << SevenSegmentFinal:ssI1.out_ssd
+led_segment_0[2] << SevenSegmentFinal:ssI1.out_ssd
+led_segment_0[3] << SevenSegmentFinal:ssI1.out_ssd
+led_segment_0[4] << SevenSegmentFinal:ssI1.out_ssd
+led_segment_0[5] << SevenSegmentFinal:ssI1.out_ssd
+led_segment_0[6] << SevenSegmentFinal:ssI1.out_ssd
+led_segment_1[0] << SevenSegmentFinal:ssI2.out_ssd
+led_segment_1[1] << SevenSegmentFinal:ssI2.out_ssd
+led_segment_1[2] << SevenSegmentFinal:ssI2.out_ssd
+led_segment_1[3] << SevenSegmentFinal:ssI2.out_ssd
+led_segment_1[4] << SevenSegmentFinal:ssI2.out_ssd
+led_segment_1[5] << SevenSegmentFinal:ssI2.out_ssd
+led_segment_1[6] << SevenSegmentFinal:ssI2.out_ssd
+led_segment_2[0] << SevenSegmentFinal:ssI3.out_ssd
+led_segment_2[1] << SevenSegmentFinal:ssI3.out_ssd
+led_segment_2[2] << SevenSegmentFinal:ssI3.out_ssd
+led_segment_2[3] << SevenSegmentFinal:ssI3.out_ssd
+led_segment_2[4] << SevenSegmentFinal:ssI3.out_ssd
+led_segment_2[5] << SevenSegmentFinal:ssI3.out_ssd
+led_segment_2[6] << SevenSegmentFinal:ssI3.out_ssd
+led_segment_3[0] << SevenSegmentFinal:ssI4.out_ssd
+led_segment_3[1] << SevenSegmentFinal:ssI4.out_ssd
+led_segment_3[2] << SevenSegmentFinal:ssI4.out_ssd
+led_segment_3[3] << SevenSegmentFinal:ssI4.out_ssd
+led_segment_3[4] << SevenSegmentFinal:ssI4.out_ssd
+led_segment_3[5] << SevenSegmentFinal:ssI4.out_ssd
+led_segment_3[6] << SevenSegmentFinal:ssI4.out_ssd
+led_segment_4[0] << SevenSegmentFinal:ssI5.out_ssd
+led_segment_4[1] << SevenSegmentFinal:ssI5.out_ssd
+led_segment_4[2] << SevenSegmentFinal:ssI5.out_ssd
+led_segment_4[3] << SevenSegmentFinal:ssI5.out_ssd
+led_segment_4[4] << SevenSegmentFinal:ssI5.out_ssd
+led_segment_4[5] << SevenSegmentFinal:ssI5.out_ssd
+led_segment_4[6] << SevenSegmentFinal:ssI5.out_ssd
+led_segment_5[0] << SevenSegmentFinal:ssI6.out_ssd
+led_segment_5[1] << SevenSegmentFinal:ssI6.out_ssd
+led_segment_5[2] << SevenSegmentFinal:ssI6.out_ssd
+led_segment_5[3] << SevenSegmentFinal:ssI6.out_ssd
+led_segment_5[4] << SevenSegmentFinal:ssI6.out_ssd
+led_segment_5[5] << SevenSegmentFinal:ssI6.out_ssd
+led_segment_5[6] << SevenSegmentFinal:ssI6.out_ssd
+led_segment_6[0] << SevenSegmentFinal:ssI7.out_ssd
+led_segment_6[1] << SevenSegmentFinal:ssI7.out_ssd
+led_segment_6[2] << SevenSegmentFinal:ssI7.out_ssd
+led_segment_6[3] << SevenSegmentFinal:ssI7.out_ssd
+led_segment_6[4] << SevenSegmentFinal:ssI7.out_ssd
+led_segment_6[5] << SevenSegmentFinal:ssI7.out_ssd
+led_segment_6[6] << SevenSegmentFinal:ssI7.out_ssd
+led_segment_7[0] << SevenSegmentFinal:ssI8.out_ssd
+led_segment_7[1] << SevenSegmentFinal:ssI8.out_ssd
+led_segment_7[2] << SevenSegmentFinal:ssI8.out_ssd
+led_segment_7[3] << SevenSegmentFinal:ssI8.out_ssd
+led_segment_7[4] << SevenSegmentFinal:ssI8.out_ssd
+led_segment_7[5] << SevenSegmentFinal:ssI8.out_ssd
+led_segment_7[6] << SevenSegmentFinal:ssI8.out_ssd
+memwrite << TopMIPS:mips.port4
+slow_clk << slow_clk.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Top_MIPS_IO|SlowClock:slowClock
+clk_in => state.CLK
+clk_in => counter[0].CLK
+clk_in => counter[1].CLK
+clk_in => counter[2].CLK
+clk_in => counter[3].CLK
+clk_in => counter[4].CLK
+clk_in => counter[5].CLK
+clk_in => counter[6].CLK
+clk_in => counter[7].CLK
+clk_in => counter[8].CLK
+clk_in => counter[9].CLK
+clk_in => counter[10].CLK
+clk_in => counter[11].CLK
+clk_in => counter[12].CLK
+clk_in => counter[13].CLK
+clk_in => counter[14].CLK
+clk_in => counter[15].CLK
+clk_in => counter[16].CLK
+clk_in => counter[17].CLK
+clk_in => counter[18].CLK
+clk_in => counter[19].CLK
+clk_in => counter[20].CLK
+clk_in => counter[21].CLK
+clk_in => counter[22].CLK
+clk_in => counter[23].CLK
+clk_in => counter[24].CLK
+clk_in => counter[25].CLK
+enable => state.OUTPUTSELECT
+clk_out <= state.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Top_MIPS_IO|TopMIPS:mips
 clk => clk.IN2
 reset => reset.IN1
-writedata[0] << writedata[0].DB_MAX_OUTPUT_PORT_TYPE
-writedata[1] << writedata[1].DB_MAX_OUTPUT_PORT_TYPE
-writedata[2] << writedata[2].DB_MAX_OUTPUT_PORT_TYPE
-writedata[3] << writedata[3].DB_MAX_OUTPUT_PORT_TYPE
-writedata[4] << writedata[4].DB_MAX_OUTPUT_PORT_TYPE
-writedata[5] << writedata[5].DB_MAX_OUTPUT_PORT_TYPE
-writedata[6] << writedata[6].DB_MAX_OUTPUT_PORT_TYPE
-writedata[7] << writedata[7].DB_MAX_OUTPUT_PORT_TYPE
-writedata[8] << writedata[8].DB_MAX_OUTPUT_PORT_TYPE
-writedata[9] << writedata[9].DB_MAX_OUTPUT_PORT_TYPE
-writedata[10] << writedata[10].DB_MAX_OUTPUT_PORT_TYPE
-writedata[11] << writedata[11].DB_MAX_OUTPUT_PORT_TYPE
-writedata[12] << writedata[12].DB_MAX_OUTPUT_PORT_TYPE
-writedata[13] << writedata[13].DB_MAX_OUTPUT_PORT_TYPE
-writedata[14] << writedata[14].DB_MAX_OUTPUT_PORT_TYPE
-writedata[15] << writedata[15].DB_MAX_OUTPUT_PORT_TYPE
-writedata[16] << writedata[16].DB_MAX_OUTPUT_PORT_TYPE
-writedata[17] << writedata[17].DB_MAX_OUTPUT_PORT_TYPE
-writedata[18] << writedata[18].DB_MAX_OUTPUT_PORT_TYPE
-writedata[19] << writedata[19].DB_MAX_OUTPUT_PORT_TYPE
-writedata[20] << writedata[20].DB_MAX_OUTPUT_PORT_TYPE
-writedata[21] << writedata[21].DB_MAX_OUTPUT_PORT_TYPE
-writedata[22] << writedata[22].DB_MAX_OUTPUT_PORT_TYPE
-writedata[23] << writedata[23].DB_MAX_OUTPUT_PORT_TYPE
-writedata[24] << writedata[24].DB_MAX_OUTPUT_PORT_TYPE
-writedata[25] << writedata[25].DB_MAX_OUTPUT_PORT_TYPE
-writedata[26] << writedata[26].DB_MAX_OUTPUT_PORT_TYPE
-writedata[27] << writedata[27].DB_MAX_OUTPUT_PORT_TYPE
-writedata[28] << writedata[28].DB_MAX_OUTPUT_PORT_TYPE
-writedata[29] << writedata[29].DB_MAX_OUTPUT_PORT_TYPE
-writedata[30] << writedata[30].DB_MAX_OUTPUT_PORT_TYPE
-writedata[31] << writedata[31].DB_MAX_OUTPUT_PORT_TYPE
-dataadr[0] << dataadr[0].DB_MAX_OUTPUT_PORT_TYPE
-dataadr[1] << dataadr[1].DB_MAX_OUTPUT_PORT_TYPE
-dataadr[2] << dataadr[2].DB_MAX_OUTPUT_PORT_TYPE
-dataadr[3] << dataadr[3].DB_MAX_OUTPUT_PORT_TYPE
-dataadr[4] << dataadr[4].DB_MAX_OUTPUT_PORT_TYPE
-dataadr[5] << dataadr[5].DB_MAX_OUTPUT_PORT_TYPE
-dataadr[6] << dataadr[6].DB_MAX_OUTPUT_PORT_TYPE
-dataadr[7] << dataadr[7].DB_MAX_OUTPUT_PORT_TYPE
-dataadr[8] << dataadr[8].DB_MAX_OUTPUT_PORT_TYPE
-dataadr[9] << dataadr[9].DB_MAX_OUTPUT_PORT_TYPE
-dataadr[10] << dataadr[10].DB_MAX_OUTPUT_PORT_TYPE
-dataadr[11] << dataadr[11].DB_MAX_OUTPUT_PORT_TYPE
-dataadr[12] << dataadr[12].DB_MAX_OUTPUT_PORT_TYPE
-dataadr[13] << dataadr[13].DB_MAX_OUTPUT_PORT_TYPE
-dataadr[14] << dataadr[14].DB_MAX_OUTPUT_PORT_TYPE
-dataadr[15] << dataadr[15].DB_MAX_OUTPUT_PORT_TYPE
-dataadr[16] << dataadr[16].DB_MAX_OUTPUT_PORT_TYPE
-dataadr[17] << dataadr[17].DB_MAX_OUTPUT_PORT_TYPE
-dataadr[18] << dataadr[18].DB_MAX_OUTPUT_PORT_TYPE
-dataadr[19] << dataadr[19].DB_MAX_OUTPUT_PORT_TYPE
-dataadr[20] << dataadr[20].DB_MAX_OUTPUT_PORT_TYPE
-dataadr[21] << dataadr[21].DB_MAX_OUTPUT_PORT_TYPE
-dataadr[22] << dataadr[22].DB_MAX_OUTPUT_PORT_TYPE
-dataadr[23] << dataadr[23].DB_MAX_OUTPUT_PORT_TYPE
-dataadr[24] << dataadr[24].DB_MAX_OUTPUT_PORT_TYPE
-dataadr[25] << dataadr[25].DB_MAX_OUTPUT_PORT_TYPE
-dataadr[26] << dataadr[26].DB_MAX_OUTPUT_PORT_TYPE
-dataadr[27] << dataadr[27].DB_MAX_OUTPUT_PORT_TYPE
-dataadr[28] << dataadr[28].DB_MAX_OUTPUT_PORT_TYPE
-dataadr[29] << dataadr[29].DB_MAX_OUTPUT_PORT_TYPE
-dataadr[30] << dataadr[30].DB_MAX_OUTPUT_PORT_TYPE
-dataadr[31] << dataadr[31].DB_MAX_OUTPUT_PORT_TYPE
-memwrite << memwrite.DB_MAX_OUTPUT_PORT_TYPE
+writedata[0] <= writedata[0].DB_MAX_OUTPUT_PORT_TYPE
+writedata[1] <= writedata[1].DB_MAX_OUTPUT_PORT_TYPE
+writedata[2] <= writedata[2].DB_MAX_OUTPUT_PORT_TYPE
+writedata[3] <= writedata[3].DB_MAX_OUTPUT_PORT_TYPE
+writedata[4] <= writedata[4].DB_MAX_OUTPUT_PORT_TYPE
+writedata[5] <= writedata[5].DB_MAX_OUTPUT_PORT_TYPE
+writedata[6] <= writedata[6].DB_MAX_OUTPUT_PORT_TYPE
+writedata[7] <= writedata[7].DB_MAX_OUTPUT_PORT_TYPE
+writedata[8] <= writedata[8].DB_MAX_OUTPUT_PORT_TYPE
+writedata[9] <= writedata[9].DB_MAX_OUTPUT_PORT_TYPE
+writedata[10] <= writedata[10].DB_MAX_OUTPUT_PORT_TYPE
+writedata[11] <= writedata[11].DB_MAX_OUTPUT_PORT_TYPE
+writedata[12] <= writedata[12].DB_MAX_OUTPUT_PORT_TYPE
+writedata[13] <= writedata[13].DB_MAX_OUTPUT_PORT_TYPE
+writedata[14] <= writedata[14].DB_MAX_OUTPUT_PORT_TYPE
+writedata[15] <= writedata[15].DB_MAX_OUTPUT_PORT_TYPE
+writedata[16] <= writedata[16].DB_MAX_OUTPUT_PORT_TYPE
+writedata[17] <= writedata[17].DB_MAX_OUTPUT_PORT_TYPE
+writedata[18] <= writedata[18].DB_MAX_OUTPUT_PORT_TYPE
+writedata[19] <= writedata[19].DB_MAX_OUTPUT_PORT_TYPE
+writedata[20] <= writedata[20].DB_MAX_OUTPUT_PORT_TYPE
+writedata[21] <= writedata[21].DB_MAX_OUTPUT_PORT_TYPE
+writedata[22] <= writedata[22].DB_MAX_OUTPUT_PORT_TYPE
+writedata[23] <= writedata[23].DB_MAX_OUTPUT_PORT_TYPE
+writedata[24] <= writedata[24].DB_MAX_OUTPUT_PORT_TYPE
+writedata[25] <= writedata[25].DB_MAX_OUTPUT_PORT_TYPE
+writedata[26] <= writedata[26].DB_MAX_OUTPUT_PORT_TYPE
+writedata[27] <= writedata[27].DB_MAX_OUTPUT_PORT_TYPE
+writedata[28] <= writedata[28].DB_MAX_OUTPUT_PORT_TYPE
+writedata[29] <= writedata[29].DB_MAX_OUTPUT_PORT_TYPE
+writedata[30] <= writedata[30].DB_MAX_OUTPUT_PORT_TYPE
+writedata[31] <= writedata[31].DB_MAX_OUTPUT_PORT_TYPE
+dataadr[0] <= dataadr[0].DB_MAX_OUTPUT_PORT_TYPE
+dataadr[1] <= dataadr[1].DB_MAX_OUTPUT_PORT_TYPE
+dataadr[2] <= dataadr[2].DB_MAX_OUTPUT_PORT_TYPE
+dataadr[3] <= dataadr[3].DB_MAX_OUTPUT_PORT_TYPE
+dataadr[4] <= dataadr[4].DB_MAX_OUTPUT_PORT_TYPE
+dataadr[5] <= dataadr[5].DB_MAX_OUTPUT_PORT_TYPE
+dataadr[6] <= dataadr[6].DB_MAX_OUTPUT_PORT_TYPE
+dataadr[7] <= dataadr[7].DB_MAX_OUTPUT_PORT_TYPE
+dataadr[8] <= dataadr[8].DB_MAX_OUTPUT_PORT_TYPE
+dataadr[9] <= dataadr[9].DB_MAX_OUTPUT_PORT_TYPE
+dataadr[10] <= dataadr[10].DB_MAX_OUTPUT_PORT_TYPE
+dataadr[11] <= dataadr[11].DB_MAX_OUTPUT_PORT_TYPE
+dataadr[12] <= dataadr[12].DB_MAX_OUTPUT_PORT_TYPE
+dataadr[13] <= dataadr[13].DB_MAX_OUTPUT_PORT_TYPE
+dataadr[14] <= dataadr[14].DB_MAX_OUTPUT_PORT_TYPE
+dataadr[15] <= dataadr[15].DB_MAX_OUTPUT_PORT_TYPE
+dataadr[16] <= dataadr[16].DB_MAX_OUTPUT_PORT_TYPE
+dataadr[17] <= dataadr[17].DB_MAX_OUTPUT_PORT_TYPE
+dataadr[18] <= dataadr[18].DB_MAX_OUTPUT_PORT_TYPE
+dataadr[19] <= dataadr[19].DB_MAX_OUTPUT_PORT_TYPE
+dataadr[20] <= dataadr[20].DB_MAX_OUTPUT_PORT_TYPE
+dataadr[21] <= dataadr[21].DB_MAX_OUTPUT_PORT_TYPE
+dataadr[22] <= dataadr[22].DB_MAX_OUTPUT_PORT_TYPE
+dataadr[23] <= dataadr[23].DB_MAX_OUTPUT_PORT_TYPE
+dataadr[24] <= dataadr[24].DB_MAX_OUTPUT_PORT_TYPE
+dataadr[25] <= dataadr[25].DB_MAX_OUTPUT_PORT_TYPE
+dataadr[26] <= dataadr[26].DB_MAX_OUTPUT_PORT_TYPE
+dataadr[27] <= dataadr[27].DB_MAX_OUTPUT_PORT_TYPE
+dataadr[28] <= dataadr[28].DB_MAX_OUTPUT_PORT_TYPE
+dataadr[29] <= dataadr[29].DB_MAX_OUTPUT_PORT_TYPE
+dataadr[30] <= dataadr[30].DB_MAX_OUTPUT_PORT_TYPE
+dataadr[31] <= dataadr[31].DB_MAX_OUTPUT_PORT_TYPE
+memwrite <= memwrite.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|TopMIPS|MIPS:mips
+|Top_MIPS_IO|TopMIPS:mips|MIPS:mips
 clk => clk.IN1
 reset => reset.IN1
 pc[0] <= Datapath:dp.port16
@@ -234,7 +330,7 @@ readdata[30] => readdata[30].IN1
 readdata[31] => readdata[31].IN1
 
 
-|TopMIPS|MIPS:mips|Controller:c
+|Top_MIPS_IO|TopMIPS:mips|MIPS:mips|Controller:c
 op[0] => op[0].IN1
 op[1] => op[1].IN1
 op[2] => op[2].IN1
@@ -268,7 +364,7 @@ lbu <= MainDecoder:md.port14
 link <= MainDecoder:md.port15
 
 
-|TopMIPS|MIPS:mips|Controller:c|MainDecoder:md
+|Top_MIPS_IO|TopMIPS:mips|MIPS:mips|Controller:c|MainDecoder:md
 op[0] => Mux0.IN36
 op[0] => Mux5.IN36
 op[0] => Mux7.IN36
@@ -353,7 +449,7 @@ lbu <= controls.DB_MAX_OUTPUT_PORT_TYPE
 link <= controls.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|TopMIPS|MIPS:mips|Controller:c|ALUDecoder:ad
+|Top_MIPS_IO|TopMIPS:mips|MIPS:mips|Controller:c|ALUDecoder:ad
 funct[0] => Decoder0.IN5
 funct[1] => Decoder0.IN4
 funct[2] => Decoder0.IN3
@@ -382,7 +478,7 @@ alucontrol[2] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
 alucontrol[3] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|TopMIPS|MIPS:mips|Datapath:dp
+|Top_MIPS_IO|TopMIPS:mips|MIPS:mips|Datapath:dp
 clk => clk.IN2
 reset => reset.IN1
 memtoreg => memtoreg.IN1
@@ -565,7 +661,7 @@ readdata[30] => readdata[30].IN1
 readdata[31] => readdata[31].IN1
 
 
-|TopMIPS|MIPS:mips|Datapath:dp|ResetableFF:pcreg
+|Top_MIPS_IO|TopMIPS:mips|MIPS:mips|Datapath:dp|ResetableFF:pcreg
 clk => q[0]~reg0.CLK
 clk => q[1]~reg0.CLK
 clk => q[2]~reg0.CLK
@@ -696,7 +792,7 @@ q[30] <= q[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 q[31] <= q[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|TopMIPS|MIPS:mips|Datapath:dp|Adder:pcadd1
+|Top_MIPS_IO|TopMIPS:mips|MIPS:mips|Datapath:dp|Adder:pcadd1
 a[0] => Add0.IN32
 a[1] => Add0.IN31
 a[2] => Add0.IN30
@@ -795,7 +891,7 @@ y[30] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
 y[31] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|TopMIPS|MIPS:mips|Datapath:dp|LeftShiftBy2:immsh
+|Top_MIPS_IO|TopMIPS:mips|MIPS:mips|Datapath:dp|LeftShiftBy2:immsh
 input_data[0] => shifted_data[2].DATAIN
 input_data[1] => shifted_data[3].DATAIN
 input_data[2] => shifted_data[4].DATAIN
@@ -862,7 +958,7 @@ shifted_data[30] <= input_data[28].DB_MAX_OUTPUT_PORT_TYPE
 shifted_data[31] <= input_data[29].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|TopMIPS|MIPS:mips|Datapath:dp|Adder:pcadd2
+|Top_MIPS_IO|TopMIPS:mips|MIPS:mips|Datapath:dp|Adder:pcadd2
 a[0] => Add0.IN32
 a[1] => Add0.IN31
 a[2] => Add0.IN30
@@ -961,7 +1057,7 @@ y[30] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
 y[31] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|TopMIPS|MIPS:mips|Datapath:dp|SignExtender:se2
+|Top_MIPS_IO|TopMIPS:mips|MIPS:mips|Datapath:dp|SignExtender:se2
 x[0] => o[0].DATAIN
 x[1] => o[1].DATAIN
 x[2] => o[2].DATAIN
@@ -1028,7 +1124,7 @@ o[30] <= x[15].DB_MAX_OUTPUT_PORT_TYPE
 o[31] <= x[15].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|TopMIPS|MIPS:mips|Datapath:dp|mux2:halfmux
+|Top_MIPS_IO|TopMIPS:mips|MIPS:mips|Datapath:dp|mux2:halfmux
 d0[0] => y.DATAA
 d0[1] => y.DATAA
 d0[2] => y.DATAA
@@ -1159,7 +1255,7 @@ y[30] <= y.DB_MAX_OUTPUT_PORT_TYPE
 y[31] <= y.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|TopMIPS|MIPS:mips|Datapath:dp|SignExtender:se3
+|Top_MIPS_IO|TopMIPS:mips|MIPS:mips|Datapath:dp|SignExtender:se3
 x[0] => o[0].DATAIN
 x[1] => o[1].DATAIN
 x[2] => o[2].DATAIN
@@ -1226,7 +1322,7 @@ o[30] <= x[7].DB_MAX_OUTPUT_PORT_TYPE
 o[31] <= x[7].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|TopMIPS|MIPS:mips|Datapath:dp|mux2:ob_mux
+|Top_MIPS_IO|TopMIPS:mips|MIPS:mips|Datapath:dp|mux2:ob_mux
 d0[0] => y.DATAA
 d0[1] => y.DATAA
 d0[2] => y.DATAA
@@ -1357,7 +1453,7 @@ y[30] <= y.DB_MAX_OUTPUT_PORT_TYPE
 y[31] <= y.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|TopMIPS|MIPS:mips|Datapath:dp|mux2:jal_resmux
+|Top_MIPS_IO|TopMIPS:mips|MIPS:mips|Datapath:dp|mux2:jal_resmux
 d0[0] => y.DATAA
 d0[1] => y.DATAA
 d0[2] => y.DATAA
@@ -1488,7 +1584,7 @@ y[30] <= y.DB_MAX_OUTPUT_PORT_TYPE
 y[31] <= y.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|TopMIPS|MIPS:mips|Datapath:dp|mux2:pcbrmux
+|Top_MIPS_IO|TopMIPS:mips|MIPS:mips|Datapath:dp|mux2:pcbrmux
 d0[0] => y.DATAA
 d0[1] => y.DATAA
 d0[2] => y.DATAA
@@ -1619,7 +1715,7 @@ y[30] <= y.DB_MAX_OUTPUT_PORT_TYPE
 y[31] <= y.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|TopMIPS|MIPS:mips|Datapath:dp|mux2:pcmux
+|Top_MIPS_IO|TopMIPS:mips|MIPS:mips|Datapath:dp|mux2:pcmux
 d0[0] => y.DATAA
 d0[1] => y.DATAA
 d0[2] => y.DATAA
@@ -1750,7 +1846,7 @@ y[30] <= y.DB_MAX_OUTPUT_PORT_TYPE
 y[31] <= y.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|TopMIPS|MIPS:mips|Datapath:dp|mux2:pcjrmux
+|Top_MIPS_IO|TopMIPS:mips|MIPS:mips|Datapath:dp|mux2:pcjrmux
 d0[0] => y.DATAA
 d0[1] => y.DATAA
 d0[2] => y.DATAA
@@ -1881,7 +1977,7 @@ y[30] <= y.DB_MAX_OUTPUT_PORT_TYPE
 y[31] <= y.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|TopMIPS|MIPS:mips|Datapath:dp|RegisterFile:rf
+|Top_MIPS_IO|TopMIPS:mips|MIPS:mips|Datapath:dp|RegisterFile:rf
 clk => rf.we_a.CLK
 clk => rf.waddr_a[4].CLK
 clk => rf.waddr_a[3].CLK
@@ -2083,7 +2179,7 @@ read_data2[30] <= read_data2.DB_MAX_OUTPUT_PORT_TYPE
 read_data2[31] <= read_data2.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|TopMIPS|MIPS:mips|Datapath:dp|mux2:wrmux
+|Top_MIPS_IO|TopMIPS:mips|MIPS:mips|Datapath:dp|mux2:wrmux
 d0[0] => y.DATAA
 d0[1] => y.DATAA
 d0[2] => y.DATAA
@@ -2106,7 +2202,7 @@ y[3] <= y.DB_MAX_OUTPUT_PORT_TYPE
 y[4] <= y.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|TopMIPS|MIPS:mips|Datapath:dp|mux2:linkmux
+|Top_MIPS_IO|TopMIPS:mips|MIPS:mips|Datapath:dp|mux2:linkmux
 d0[0] => y.DATAA
 d0[1] => y.DATAA
 d0[2] => y.DATAA
@@ -2129,7 +2225,7 @@ y[3] <= y.DB_MAX_OUTPUT_PORT_TYPE
 y[4] <= y.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|TopMIPS|MIPS:mips|Datapath:dp|mux4:resmux
+|Top_MIPS_IO|TopMIPS:mips|MIPS:mips|Datapath:dp|mux4:resmux
 d0[0] => Mux31.IN0
 d0[1] => Mux30.IN0
 d0[2] => Mux29.IN0
@@ -2356,7 +2452,7 @@ Y[30] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
 Y[31] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|TopMIPS|MIPS:mips|Datapath:dp|SignExtender:se
+|Top_MIPS_IO|TopMIPS:mips|MIPS:mips|Datapath:dp|SignExtender:se
 x[0] => o[0].DATAIN
 x[1] => o[1].DATAIN
 x[2] => o[2].DATAIN
@@ -2423,7 +2519,7 @@ o[30] <= x[15].DB_MAX_OUTPUT_PORT_TYPE
 o[31] <= x[15].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|TopMIPS|MIPS:mips|Datapath:dp|ExtNext:ex
+|Top_MIPS_IO|TopMIPS:mips|MIPS:mips|Datapath:dp|ExtNext:ex
 a[0] => y[0].DATAIN
 a[1] => y[1].DATAIN
 a[2] => y[2].DATAIN
@@ -2474,7 +2570,7 @@ y[30] <= <GND>
 y[31] <= <GND>
 
 
-|TopMIPS|MIPS:mips|Datapath:dp|mux2:srcbmux
+|Top_MIPS_IO|TopMIPS:mips|MIPS:mips|Datapath:dp|mux2:srcbmux
 d0[0] => y.DATAA
 d0[1] => y.DATAA
 d0[2] => y.DATAA
@@ -2605,7 +2701,7 @@ y[30] <= y.DB_MAX_OUTPUT_PORT_TYPE
 y[31] <= y.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|TopMIPS|MIPS:mips|Datapath:dp|mux2:extimux
+|Top_MIPS_IO|TopMIPS:mips|MIPS:mips|Datapath:dp|mux2:extimux
 d0[0] => y.DATAA
 d0[1] => y.DATAA
 d0[2] => y.DATAA
@@ -2736,7 +2832,7 @@ y[30] <= y.DB_MAX_OUTPUT_PORT_TYPE
 y[31] <= y.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|TopMIPS|MIPS:mips|Datapath:dp|ALU:alu
+|Top_MIPS_IO|TopMIPS:mips|MIPS:mips|Datapath:dp|ALU:alu
 operand1[0] => result.IN0
 operand1[0] => result.IN0
 operand1[0] => Add0.IN32
@@ -3572,7 +3668,7 @@ result[31] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 zero <= Equal1.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|TopMIPS|InsructionMemory2:imem
+|Top_MIPS_IO|TopMIPS:mips|InsructionMemory2:imem
 a[0] => ram.RADDR
 a[1] => ram.RADDR1
 a[2] => ram.RADDR2
@@ -3613,7 +3709,7 @@ readdata[30] <= ram.DATAOUT30
 readdata[31] <= ram.DATAOUT31
 
 
-|TopMIPS|DataMemory:dmem
+|Top_MIPS_IO|TopMIPS:mips|DataMemory:dmem
 clk => ram.we_a.CLK
 clk => ram.waddr_a[5].CLK
 clk => ram.waddr_a[4].CLK
@@ -3796,5 +3892,117 @@ read_data[28] <= ram.DATAOUT28
 read_data[29] <= ram.DATAOUT29
 read_data[30] <= ram.DATAOUT30
 read_data[31] <= ram.DATAOUT31
+
+
+|Top_MIPS_IO|SevenSegmentFinal:ssI1
+in_bcd[0] => Decoder0.IN3
+in_bcd[1] => Decoder0.IN2
+in_bcd[2] => Decoder0.IN1
+in_bcd[3] => Decoder0.IN0
+out_ssd[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+out_ssd[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+out_ssd[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+out_ssd[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+out_ssd[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+out_ssd[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+out_ssd[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Top_MIPS_IO|SevenSegmentFinal:ssI2
+in_bcd[0] => Decoder0.IN3
+in_bcd[1] => Decoder0.IN2
+in_bcd[2] => Decoder0.IN1
+in_bcd[3] => Decoder0.IN0
+out_ssd[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+out_ssd[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+out_ssd[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+out_ssd[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+out_ssd[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+out_ssd[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+out_ssd[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Top_MIPS_IO|SevenSegmentFinal:ssI3
+in_bcd[0] => Decoder0.IN3
+in_bcd[1] => Decoder0.IN2
+in_bcd[2] => Decoder0.IN1
+in_bcd[3] => Decoder0.IN0
+out_ssd[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+out_ssd[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+out_ssd[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+out_ssd[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+out_ssd[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+out_ssd[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+out_ssd[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Top_MIPS_IO|SevenSegmentFinal:ssI4
+in_bcd[0] => Decoder0.IN3
+in_bcd[1] => Decoder0.IN2
+in_bcd[2] => Decoder0.IN1
+in_bcd[3] => Decoder0.IN0
+out_ssd[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+out_ssd[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+out_ssd[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+out_ssd[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+out_ssd[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+out_ssd[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+out_ssd[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Top_MIPS_IO|SevenSegmentFinal:ssI5
+in_bcd[0] => Decoder0.IN3
+in_bcd[1] => Decoder0.IN2
+in_bcd[2] => Decoder0.IN1
+in_bcd[3] => Decoder0.IN0
+out_ssd[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+out_ssd[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+out_ssd[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+out_ssd[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+out_ssd[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+out_ssd[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+out_ssd[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Top_MIPS_IO|SevenSegmentFinal:ssI6
+in_bcd[0] => Decoder0.IN3
+in_bcd[1] => Decoder0.IN2
+in_bcd[2] => Decoder0.IN1
+in_bcd[3] => Decoder0.IN0
+out_ssd[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+out_ssd[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+out_ssd[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+out_ssd[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+out_ssd[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+out_ssd[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+out_ssd[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Top_MIPS_IO|SevenSegmentFinal:ssI7
+in_bcd[0] => Decoder0.IN3
+in_bcd[1] => Decoder0.IN2
+in_bcd[2] => Decoder0.IN1
+in_bcd[3] => Decoder0.IN0
+out_ssd[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+out_ssd[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+out_ssd[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+out_ssd[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+out_ssd[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+out_ssd[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+out_ssd[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Top_MIPS_IO|SevenSegmentFinal:ssI8
+in_bcd[0] => Decoder0.IN3
+in_bcd[1] => Decoder0.IN2
+in_bcd[2] => Decoder0.IN1
+in_bcd[3] => Decoder0.IN0
+out_ssd[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+out_ssd[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+out_ssd[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+out_ssd[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+out_ssd[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+out_ssd[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+out_ssd[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 

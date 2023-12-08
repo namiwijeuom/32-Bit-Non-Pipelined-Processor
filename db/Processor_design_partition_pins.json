@@ -4,259 +4,227 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "writedata[0]",
+					"name" : "led_segment_0[0]",
 					"strict" : false
 				},
 				{
-					"name" : "writedata[1]",
+					"name" : "led_segment_0[1]",
 					"strict" : false
 				},
 				{
-					"name" : "writedata[2]",
+					"name" : "led_segment_0[2]",
 					"strict" : false
 				},
 				{
-					"name" : "writedata[3]",
+					"name" : "led_segment_0[3]",
 					"strict" : false
 				},
 				{
-					"name" : "writedata[4]",
+					"name" : "led_segment_0[4]",
 					"strict" : false
 				},
 				{
-					"name" : "writedata[5]",
+					"name" : "led_segment_0[5]",
 					"strict" : false
 				},
 				{
-					"name" : "writedata[6]",
+					"name" : "led_segment_0[6]",
 					"strict" : false
 				},
 				{
-					"name" : "writedata[7]",
+					"name" : "led_segment_1[0]",
 					"strict" : false
 				},
 				{
-					"name" : "writedata[8]",
+					"name" : "led_segment_1[1]",
 					"strict" : false
 				},
 				{
-					"name" : "writedata[9]",
+					"name" : "led_segment_1[2]",
 					"strict" : false
 				},
 				{
-					"name" : "writedata[10]",
+					"name" : "led_segment_1[3]",
 					"strict" : false
 				},
 				{
-					"name" : "writedata[11]",
+					"name" : "led_segment_1[4]",
 					"strict" : false
 				},
 				{
-					"name" : "writedata[12]",
+					"name" : "led_segment_1[5]",
 					"strict" : false
 				},
 				{
-					"name" : "writedata[13]",
+					"name" : "led_segment_1[6]",
 					"strict" : false
 				},
 				{
-					"name" : "writedata[14]",
+					"name" : "led_segment_2[0]",
 					"strict" : false
 				},
 				{
-					"name" : "writedata[15]",
+					"name" : "led_segment_2[1]",
 					"strict" : false
 				},
 				{
-					"name" : "writedata[16]",
+					"name" : "led_segment_2[2]",
 					"strict" : false
 				},
 				{
-					"name" : "writedata[17]",
+					"name" : "led_segment_2[3]",
 					"strict" : false
 				},
 				{
-					"name" : "writedata[18]",
+					"name" : "led_segment_2[4]",
 					"strict" : false
 				},
 				{
-					"name" : "writedata[19]",
+					"name" : "led_segment_2[5]",
 					"strict" : false
 				},
 				{
-					"name" : "writedata[20]",
+					"name" : "led_segment_2[6]",
 					"strict" : false
 				},
 				{
-					"name" : "writedata[21]",
+					"name" : "led_segment_3[0]",
 					"strict" : false
 				},
 				{
-					"name" : "writedata[22]",
+					"name" : "led_segment_3[1]",
 					"strict" : false
 				},
 				{
-					"name" : "writedata[23]",
+					"name" : "led_segment_3[2]",
 					"strict" : false
 				},
 				{
-					"name" : "writedata[24]",
+					"name" : "led_segment_3[3]",
 					"strict" : false
 				},
 				{
-					"name" : "writedata[25]",
+					"name" : "led_segment_3[4]",
 					"strict" : false
 				},
 				{
-					"name" : "writedata[26]",
+					"name" : "led_segment_3[5]",
 					"strict" : false
 				},
 				{
-					"name" : "writedata[27]",
+					"name" : "led_segment_3[6]",
 					"strict" : false
 				},
 				{
-					"name" : "writedata[28]",
+					"name" : "led_segment_4[0]",
 					"strict" : false
 				},
 				{
-					"name" : "writedata[29]",
+					"name" : "led_segment_4[1]",
 					"strict" : false
 				},
 				{
-					"name" : "writedata[30]",
+					"name" : "led_segment_4[2]",
 					"strict" : false
 				},
 				{
-					"name" : "writedata[31]",
+					"name" : "led_segment_4[3]",
 					"strict" : false
 				},
 				{
-					"name" : "dataadr[0]",
+					"name" : "led_segment_4[4]",
 					"strict" : false
 				},
 				{
-					"name" : "dataadr[1]",
+					"name" : "led_segment_4[5]",
 					"strict" : false
 				},
 				{
-					"name" : "dataadr[2]",
+					"name" : "led_segment_4[6]",
 					"strict" : false
 				},
 				{
-					"name" : "dataadr[3]",
+					"name" : "led_segment_5[0]",
 					"strict" : false
 				},
 				{
-					"name" : "dataadr[4]",
+					"name" : "led_segment_5[1]",
 					"strict" : false
 				},
 				{
-					"name" : "dataadr[5]",
+					"name" : "led_segment_5[2]",
 					"strict" : false
 				},
 				{
-					"name" : "dataadr[6]",
+					"name" : "led_segment_5[3]",
 					"strict" : false
 				},
 				{
-					"name" : "dataadr[7]",
+					"name" : "led_segment_5[4]",
 					"strict" : false
 				},
 				{
-					"name" : "dataadr[8]",
+					"name" : "led_segment_5[5]",
 					"strict" : false
 				},
 				{
-					"name" : "dataadr[9]",
+					"name" : "led_segment_5[6]",
 					"strict" : false
 				},
 				{
-					"name" : "dataadr[10]",
+					"name" : "led_segment_6[0]",
 					"strict" : false
 				},
 				{
-					"name" : "dataadr[11]",
+					"name" : "led_segment_6[1]",
 					"strict" : false
 				},
 				{
-					"name" : "dataadr[12]",
+					"name" : "led_segment_6[2]",
 					"strict" : false
 				},
 				{
-					"name" : "dataadr[13]",
+					"name" : "led_segment_6[3]",
 					"strict" : false
 				},
 				{
-					"name" : "dataadr[14]",
+					"name" : "led_segment_6[4]",
 					"strict" : false
 				},
 				{
-					"name" : "dataadr[15]",
+					"name" : "led_segment_6[5]",
 					"strict" : false
 				},
 				{
-					"name" : "dataadr[16]",
+					"name" : "led_segment_6[6]",
 					"strict" : false
 				},
 				{
-					"name" : "dataadr[17]",
+					"name" : "led_segment_7[0]",
 					"strict" : false
 				},
 				{
-					"name" : "dataadr[18]",
+					"name" : "led_segment_7[1]",
 					"strict" : false
 				},
 				{
-					"name" : "dataadr[19]",
+					"name" : "led_segment_7[2]",
 					"strict" : false
 				},
 				{
-					"name" : "dataadr[20]",
+					"name" : "led_segment_7[3]",
 					"strict" : false
 				},
 				{
-					"name" : "dataadr[21]",
+					"name" : "led_segment_7[4]",
 					"strict" : false
 				},
 				{
-					"name" : "dataadr[22]",
+					"name" : "led_segment_7[5]",
 					"strict" : false
 				},
 				{
-					"name" : "dataadr[23]",
-					"strict" : false
-				},
-				{
-					"name" : "dataadr[24]",
-					"strict" : false
-				},
-				{
-					"name" : "dataadr[25]",
-					"strict" : false
-				},
-				{
-					"name" : "dataadr[26]",
-					"strict" : false
-				},
-				{
-					"name" : "dataadr[27]",
-					"strict" : false
-				},
-				{
-					"name" : "dataadr[28]",
-					"strict" : false
-				},
-				{
-					"name" : "dataadr[29]",
-					"strict" : false
-				},
-				{
-					"name" : "dataadr[30]",
-					"strict" : false
-				},
-				{
-					"name" : "dataadr[31]",
+					"name" : "led_segment_7[6]",
 					"strict" : false
 				},
 				{
@@ -264,11 +232,19 @@
 					"strict" : false
 				},
 				{
-					"name" : "clk",
+					"name" : "slow_clk",
 					"strict" : false
 				},
 				{
 					"name" : "reset",
+					"strict" : false
+				},
+				{
+					"name" : "clkEnable",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
 					"strict" : false
 				}
 			]

@@ -11,7 +11,7 @@ cModel Technology
 Z0 dC:/Verilog_and_SystemVerilog/simulation/modelsim
 vAdder
 Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
-Z2 !s110 1697101933
+Z2 !s110 1701710736
 !i10b 1
 !s100 ^F]7jl<T10bfI6VjF;X6F2
 Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
@@ -28,7 +28,7 @@ Z6 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z7 !s108 1697101933.000000
+Z7 !s108 1701710736.000000
 !s107 C:/Verilog_and_SystemVerilog/Adder.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Verilog_and_SystemVerilog|C:/Verilog_and_SystemVerilog/Adder.sv|
 !i113 1
@@ -38,7 +38,7 @@ Z10 tCvgOpt 0
 n@adder
 vALU
 R1
-Z11 !s110 1697101932
+R2
 !i10b 1
 !s100 hnh570d77MGM?nMj752bm1
 R3
@@ -55,7 +55,7 @@ R6
 r1
 !s85 0
 31
-Z12 !s108 1697101932.000000
+R7
 !s107 C:/Verilog_and_SystemVerilog/ALU.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Verilog_and_SystemVerilog|C:/Verilog_and_SystemVerilog/ALU.sv|
 !i113 1
@@ -82,7 +82,7 @@ R6
 r1
 !s85 0
 31
-R12
+R7
 !s107 C:/Verilog_and_SystemVerilog/ALUDecoder.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Verilog_and_SystemVerilog|C:/Verilog_and_SystemVerilog/ALUDecoder.sv|
 !i113 1
@@ -119,7 +119,7 @@ R10
 n@controller
 vDataMemory
 R1
-R11
+Z11 !s110 1701710735
 !i10b 1
 !s100 1ED0zV=RnWN7D=`PdjPoL1
 R3
@@ -136,7 +136,7 @@ R6
 r1
 !s85 0
 31
-R12
+Z12 !s108 1701710735.000000
 !s107 C:/Verilog_and_SystemVerilog/DataMemory.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Verilog_and_SystemVerilog|C:/Verilog_and_SystemVerilog/DataMemory.sv|
 !i113 1
@@ -146,24 +146,24 @@ R10
 n@data@memory
 vDatapath
 R1
-R2
+Z13 !s110 1701710737
 !i10b 1
-!s100 Wf^ghDYo^]Wo`_1Zmao`42
+!s100 z1:F[lee?ba=GXTiM?fXi2
 R3
-I6i2OF6PY;5kgiT>Ug]@j50
+IP2Ti71=fE8`gbI@VHN_1:1
 R4
 S1
 R0
-w1697050485
+w1701521050
 8C:/Verilog_and_SystemVerilog/Datapath.sv
 FC:/Verilog_and_SystemVerilog/Datapath.sv
 !i122 12
-L0 16 78
+L0 16 80
 R6
 r1
 !s85 0
 31
-R7
+Z14 !s108 1701710737.000000
 !s107 C:/Verilog_and_SystemVerilog/Datapath.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Verilog_and_SystemVerilog|C:/Verilog_and_SystemVerilog/Datapath.sv|
 !i113 1
@@ -173,7 +173,7 @@ R10
 n@datapath
 vExtNext
 R1
-R2
+R13
 !i10b 1
 !s100 7UZO@d4ClZIlGXzDUcb772
 R3
@@ -184,13 +184,13 @@ R0
 w1697051090
 8C:/Verilog_and_SystemVerilog/ExtNext.sv
 FC:/Verilog_and_SystemVerilog/ExtNext.sv
-!i122 14
+!i122 15
 R5
 R6
 r1
 !s85 0
 31
-R7
+R14
 !s107 C:/Verilog_and_SystemVerilog/ExtNext.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Verilog_and_SystemVerilog|C:/Verilog_and_SystemVerilog/ExtNext.sv|
 !i113 1
@@ -200,15 +200,15 @@ R10
 n@ext@next
 vInsructionMemory2
 R1
-Z13 !s110 1697101934
+R13
 !i10b 1
-!s100 4:j<U^n9<HhDeC`7oPWzf0
+!s100 WG2J=acCCCWgW7lH?PjCD3
 R3
-I07cVE:j47W3jR42@d9>MK1
+IYa3MNa;eVczA<_7DU;nYW2
 R4
 S1
 R0
-w1697101909
+w1701312776
 8C:/Verilog_and_SystemVerilog/InsructionMemory2.sv
 FC:/Verilog_and_SystemVerilog/InsructionMemory2.sv
 !i122 17
@@ -217,7 +217,7 @@ R6
 r1
 !s85 0
 31
-Z14 !s108 1697101934.000000
+R14
 !s107 C:/Verilog_and_SystemVerilog/InsructionMemory2.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Verilog_and_SystemVerilog|C:/Verilog_and_SystemVerilog/InsructionMemory2.sv|
 !i113 1
@@ -227,7 +227,7 @@ R10
 n@insruction@memory2
 vLeftShiftBy2
 R1
-R11
+R2
 !i10b 1
 !s100 HVXHm1`K8J:^=@:`A0Hi92
 R3
@@ -244,7 +244,7 @@ R6
 r1
 !s85 0
 31
-R12
+R7
 !s107 C:/Verilog_and_SystemVerilog/LeftShiftBy2.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Verilog_and_SystemVerilog|C:/Verilog_and_SystemVerilog/LeftShiftBy2.sv|
 !i113 1
@@ -306,6 +306,33 @@ R8
 R9
 R10
 n@m@i@p@s
+vMIPStestbench
+R1
+R13
+!i10b 1
+!s100 eNoBhBA@zIF;f9BaWe;<Z1
+R3
+IoYBW=[mmU8[>nZX85E8EU3
+R4
+S1
+R0
+w1701527236
+8C:/Verilog_and_SystemVerilog/MIPStestbench.sv
+FC:/Verilog_and_SystemVerilog/MIPStestbench.sv
+!i122 14
+L0 1 44
+R6
+r1
+!s85 0
+31
+R14
+!s107 C:/Verilog_and_SystemVerilog/MIPStestbench.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Verilog_and_SystemVerilog|C:/Verilog_and_SystemVerilog/MIPStestbench.sv|
+!i113 1
+R8
+R9
+R10
+n@m@i@p@stestbench
 vmux2
 R1
 R2
@@ -334,7 +361,7 @@ R9
 R10
 vmux4
 R1
-R2
+R13
 !i10b 1
 !s100 _>21M=TjnKU=N]ej4dcA;2
 R3
@@ -345,13 +372,13 @@ R0
 w1697050090
 8C:/Verilog_and_SystemVerilog/mux4.sv
 FC:/Verilog_and_SystemVerilog/mux4.sv
-!i122 15
+!i122 16
 L0 1 15
 R6
 r1
 !s85 0
 31
-R7
+R14
 !s107 C:/Verilog_and_SystemVerilog/mux4.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Verilog_and_SystemVerilog|C:/Verilog_and_SystemVerilog/mux4.sv|
 !i113 1
@@ -414,7 +441,7 @@ R10
 n@resetable@f@f
 vSignExtender
 R1
-R11
+R2
 !i10b 1
 !s100 <MbE;08e5bGjabd5Fb[`i2
 R3
@@ -439,53 +466,26 @@ R8
 R9
 R10
 n@sign@extender
-vTestbenchLhlb
+vTopMIPS
 R1
 R13
 !i10b 1
-!s100 <_a7WZ64Q:Q9LMh0_7baI0
+!s100 dNL162@P:LUO_@DX<hQnV2
 R3
-I9@UEJo6A8khl3m`fUG<^23
+I3Q1VncM9m6Vmo=Wh[8zGa0
 R4
 S1
 R0
-w1697101849
-8C:/Verilog_and_SystemVerilog/TestbenchLhlb.sv
-FC:/Verilog_and_SystemVerilog/TestbenchLhlb.sv
-!i122 16
-L0 1 37
+w1701701982
+8C:/Verilog_and_SystemVerilog/TopMIPS.sv
+FC:/Verilog_and_SystemVerilog/TopMIPS.sv
+!i122 13
+L0 3 25
 R6
 r1
 !s85 0
 31
 R14
-!s107 C:/Verilog_and_SystemVerilog/TestbenchLhlb.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Verilog_and_SystemVerilog|C:/Verilog_and_SystemVerilog/TestbenchLhlb.sv|
-!i113 1
-R8
-R9
-R10
-n@testbench@lhlb
-vTopMIPS
-R1
-R2
-!i10b 1
-!s100 V61Po>zT_MQ_l>7X4BF6k2
-R3
-I:I64BbP::o][U0h7Jmf1n0
-R4
-S1
-R0
-w1697050818
-8C:/Verilog_and_SystemVerilog/TopMIPS.sv
-FC:/Verilog_and_SystemVerilog/TopMIPS.sv
-!i122 13
-L0 3 15
-R6
-r1
-!s85 0
-31
-R7
 !s107 C:/Verilog_and_SystemVerilog/TopMIPS.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Verilog_and_SystemVerilog|C:/Verilog_and_SystemVerilog/TopMIPS.sv|
 !i113 1
